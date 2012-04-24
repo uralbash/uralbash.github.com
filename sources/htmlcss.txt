@@ -7,6 +7,7 @@
 Статические Веб-страницы
 ************************
 
+
 Как не надо верстать сайты
 ==========================
 ----------------------------------
@@ -16,6 +17,12 @@
 | Очень много флеша, картинок, сутенерский дизайн.
 | Обсуждение здесь `<http://www.linux.org.ru/forum/talks/5841928>`_
 
+-----------
+Site on LSD
+-----------
+| Пример ненормального программирования `<http://lsd.bicycle-day.com/>`_
+| Статья на хабре `<http://habrahabr.ru/post/142524/>`_
+
 Вопросы?
 ========
 
@@ -23,10 +30,10 @@
 
     <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dHo2MmpkOGZiQVRhaWQ4dk9uUnF2dWc6MQ" width="760" height="389" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
 
+.. _hw2:
+
 Домашнее задание
 ================
-
-.. _htmlcss-homework-label:
 
 **Задание 1**
 
@@ -38,4 +45,7 @@
 
 | `<http://htmlbook.ru>`_
 | `<http://w3schools.com>`_
+Коллекция ссылок на материалы по HTML, CSS и JS iAdramelk_
+
+.. _iAdramelk: https://github.com/iAdramelk/html-primer
 

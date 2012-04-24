@@ -8,7 +8,7 @@
 **************************
 
 Лекции по Веб-программированию
-===============================
+==============================
 
 Содержание:
 
@@ -19,8 +19,20 @@
    htmlcss.rst
    dcvs.rst
    python.rst
+   python-bd.rst
+   python-net.rst
+   python-net-advanced.rst
    python-web.rst
    pylons.rst
+
+Аттестация:
+
+.. toctree::
+   :maxdepth: 2
+
+   students/attestation.rst
+   students/course_work.rst
+
 .. Основы языка программирования Python
 
 .. Основы Веб-программирования

@@ -1,0 +1,27 @@
+.. web_programming documentation master file, created by
+   sphinx-quickstart on Sun Mar 11 17:49:44 2012.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+***************
+Курсовая работа
+***************
+
+Скачать: :download:`Бланк на курсовую работу <blank_kurs_task.doc>`.
+
+2012, группа ФО-391001
+======================
+.. csv-table::
+    :stub-columns: 1
+    :header-rows: 1
+    :widths: 100, 10, 10, 10, 100, 100
+    :file: csv/course_work/2012/391001.csv
+
+2012, группа ЭМ-391701
+======================
+.. csv-table::
+    :stub-columns: 1
+    :header-rows: 1
+    :widths: 100, 10, 10, 10, 100, 100
+    :file: csv/course_work/2012/391701.csv
+

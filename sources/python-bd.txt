@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 ************************************
-Основы языка программирования Python
+Основы работы с БД в Python
 ************************************
 
 Вопросы?
@@ -27,9 +27,4 @@
 
 Ресурсы
 =======
-* `Язык программирования Python <http://www.intuit.ru/department/pl/python/>`_ Автор: Сузи Р.А
-* `Сравнение Python с php, perl, ruby. Часть 1 <http://hyperpolyglot.org/scripting>`_
-* `Сравнение Python с php, perl, ruby. Часть 2 <http://hyperpolyglot.org/scripting2>`_
-* `Python для графовой теории <http://buzzard.pugetsound.edu/sage-practice/index.html>`_
-* `Список ссылок на документацию по Python <http://python.objectis.net/>`_
-* `Лекции по Python в Университете Сиднея <http://www.ug.it.usyd.edu.au/~comp5315/outline.html>`_
+* `Реляционные базы данных и SQL <http://mech.math.msu.su/~shvetz/54/inf/databases/index.xhtml>`_ на примере PostgreSQL
