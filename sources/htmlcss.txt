@@ -45,6 +45,7 @@ Site on LSD
 
 | `<http://htmlbook.ru>`_
 | `<http://w3schools.com>`_
+
 Коллекция ссылок на материалы по HTML, CSS и JS iAdramelk_
 
 .. _iAdramelk: https://github.com/iAdramelk/html-primer

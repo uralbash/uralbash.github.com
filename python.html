@@ -53,20 +53,589 @@
             
   <div class="section" id="python">
 <h1>Основы языка программирования Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<p>Pyhton высокоуровневый, интерпретируемый, интерактивный и
+объектно-ориентированный язык программирования.</p>
+<p>Python разработал Guido van Rossum в конце 80х начале 90х годов в Национальном
+научно-исследовательском институте Математики и Компьютерных технологий в
+Нидерландах.</p>
+<img alt="images/200px-Guido_van_Rossum_OSCON_2006.jpg" src="images/200px-Guido_van_Rossum_OSCON_2006.jpg" />
+<p>Python наследовал особенности многих других языков программирования, таких как ABC, Modula-3, C, C++, Algol-68, SmallTalk, Unix shell и другие скриптовые языки.</p>
+<p>Python защищен авторским правом, код открыт под лицензией GNU General Public License (GPL).</p>
 <div class="section" id="id1">
-<h2>Вопросы?<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dHo2MmpkOGZiQVRhaWQ4dk9uUnF2dWc6MQ" width="760" height="389" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe></div>
+<h2>Основные функции:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Легко выучить: Python имеет небольшое количество ключевых слов, простую структуру и строго определенный синтаксис. Это позволяет студентам выучить язык в течении небольшого промежутка времени.</li>
+<li>Простой синтаксис: Python код легко понять и просто читать.</li>
+<li>Простое сопровождение: Успех программ на Python заключается в его легком сопровождении.</li>
+<li>Большой набор стандартных библиотек: Одна из сильных сторон Python&#8217;а это наличие большого количества библиотек &#8220;из коробки&#8221;, помимо этого они компактные и кросс-платформенный, работают на UNIX, Windows, и Macintosh.</li>
+<li>Интерактивный режим: Support for an interactive mode in which you can enter results from a terminal right to the language, allowing interactive testing and debugging of snippets of code.</li>
+<li>Портативный: Python может работать на различных аппаратных платформах и имеет везде одинаковый интерфейс.</li>
+<li>Расширяемый: Вы можете добавить низкоуровневые модули в интерпретатор Python.
+Эти модули позволяют программистам добавлять или настраивать свои
+инструменты, чтобы быть более эффективным.</li>
+<li>Базы данных: Python предоставляет интерфейсы для всех основных коммерческих
+баз данных.</li>
+<li>Программирование GUI: Python поддерживает GUI приложения, которые могут быть созданы и портированы на многие системные вызовы, библиотеки и оконные системы, такие как Windows, MFC, Macintosh, и система X Window в Unix.</li>
+<li>Масштабируемость: Python обеспечивает лучшую структуру и поддержку больших программ, чем shell сценарии.</li>
+</ul>
+<p>Кроме вышеупомянутых особенностей, Python имеет большой список возможностей, некоторые из них перечислены ниже:</p>
+<ul class="simple">
+<li>Поддержка функционального и структурированного методов программирования, а также ООП.</li>
+<li>Он может быть использован в качестве скриптового языка или скомпилирован в байт-код для создания больших приложений.</li>
+<li>Очень высокого уровня динамические типы данных и динамическая проверка типов.</li>
+<li>Автоматический сборщик мусора.</li>
+<li>Легко встраивается в C, C++, COM, ActiveX, CORBA, и Java.</li>
+</ul>
+</div>
 <div class="section" id="id2">
-<h2>Закрепление материала<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>Установка Python:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Все обновления, исходный код, бинарники, документация, новости, итд. доступно на оффициальном сайте:</p>
+<p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
+<p>Документация доступна в HTML, PDF и PostScript форматах.</p>
+<p><a class="reference external" href="www.python.org/doc/">www.python.org/doc/</a></p>
+</div>
+<div class="section" id="id3">
+<h2>Первая программа на Python:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Зайдите в интерактивный режим, введите в коммандной строке &#8220;python&#8221;</p>
+<div class="code highlight-python"><pre>root# python
+Python 2.5 (r25:51908, Nov  6 2007, 16:54:01)
+[GCC 4.1.2 20070925 (Red Hat 4.1.2-27)] on linux2
+Type "help", "copyright", "credits" or "license" for more info.
+&gt;&gt;&gt;</pre>
+</div>
+<p>Введите в интерактивном режиме:</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s">&quot;Hello, Python!&quot;</span>
+</pre></div>
+</div>
+<p>Нажмите Enter и Вы увидите:</p>
+<div class="code highlight-python"><pre>Hello, Python!</pre>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Идентификаторы в Python:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Идентификатор используется для именования переменных, функций, классов, модулей
+или других объектов. Идентификаторы начинаются с букв A-Z, a-z или
+подчеркивания (_), за которыми следуют 0 или более букв или цифр (0-9).</p>
+<p>Запрещено использовать знаки &#64;, $ и % в идентификаторах. Все названия являются
+регистрозависимыми. Таким образом user и User это два разных идентификатора в
+Python&#8217;е.</p>
+<p>Как правильно именовать идентификаторы:</p>
+<ul class="simple">
+<li>Имена классов начинаются с заглавной буквы, все остальные со строчной</li>
+<li>Идентификаторы начинающиеся с подчеркивания означают что он приватный</li>
+<li>Идентификаторы начинающиеся с двух подчеркиваний означают что он строго приватный</li>
+<li>Если едентификатор начинается и заканчивается двумя подчеркиваниями это
+означает спечиальное имя</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>Зарезервированные слова:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Зарезервированные слова нельзя использовать для переменных, констант и других
+идентификаторах</p>
+<table cellpadding="5" border="1" class="src">
+<tbody><tr><td>and</td><td>exec</td><td>not</td></tr>
+<tr><td>assert</td><td>finally</td><td>or</td></tr>
+<tr><td>break</td><td>for</td><td>pass</td></tr>
+<tr><td>class</td><td>from</td><td>print</td></tr>
+<tr><td>continue</td><td>global</td><td>raise</td></tr>
+<tr><td>def</td><td>if</td><td>return</td></tr>
+<tr><td>del</td><td>import</td><td>try</td></tr>
+<tr><td>elif</td><td>in</td><td>while</td></tr>
+<tr><td>else</td><td>is</td><td>with </td></tr>
+<tr><td>except</td><td>lambda</td><td>yield</td></tr>
+</tbody></table></div>
+<div class="section" id="id6">
+<h2>Строки и отступы:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Первое что бросается в глаза при изучении Python это отсутствие скобок для
+обозначения блоков кода, классов и функций. Для их обозначения используются
+отступы, данное написание должно строго соблюдаться.</p>
+<p>Число пробелов в отступе может быть разным, но все выражения в блоке должны быть
+смещены на то же количество пробелов.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;True&quot;</span> <span class="c"># 4 пробела</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span> <span class="s">&quot;False&quot;</span>  <span class="c"># 2 пробела</span>
+</pre></div>
+</div>
+<p>Этот пример вызовет ошибку синтаксиса</p>
+<div class="code highlight-python"><pre>if True:
+    print "Answer"
+    print "True"
+else:
+    print "Answer"  # отступ в 4 пробела
+  print "False"     # Ошибка: 2 пробела в том же блоке, вместо 4х</pre>
+</div>
+<p>Принято использовать для отступов 4 пробела, в частности заменять табуляцию 4мя
+пробелами. Более подробно в pep8 <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">http://www.python.org/dev/peps/pep-0008/</a></p>
+</div>
+<div class="section" id="id7">
+<h2>Многострочные выражения:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>В Pyhton&#8217;е с каждой новой строки начинается новое выражение. Если Вам
+необходимо поместить выражение в несколько строк то используйте знак &#8220;\&#8221; для
+переноса.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">total</span> <span class="o">=</span> <span class="n">item_one</span> <span class="o">+</span> \
+        <span class="n">item_two</span> <span class="o">+</span> \
+        <span class="n">item_three</span>
+</pre></div>
+</div>
+<p>Выражения заключенные в скобки [], {}, () не нуждаются в знаке переноса.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">days</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Monday&#39;</span><span class="p">,</span> <span class="s">&#39;Tuesday&#39;</span><span class="p">,</span> <span class="s">&#39;Wednesday&#39;</span><span class="p">,</span>
+             <span class="s">&#39;Thursday&#39;</span><span class="p">,</span> <span class="s">&#39;Friday&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>Цитаты в Python&#8217;е<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Python поддерживает одинарные (&#8216;), двойные (&#8221;) и тройный (&#8216;&#8217;&#8217; или &#8220;&#8221;&#8221;) ковычки
+для строк.</p>
+<p>Тройные ковычки ипользуются многострочных строк.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">word</span> <span class="o">=</span> <span class="s">&#39;слово&#39;</span>
+<span class="n">sentence</span> <span class="o">=</span> <span class="s">&quot;Это предложение.&quot;</span>
+<span class="n">paragraph</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;Это параграф. Состоит</span>
+<span class="s">нескольких строк и предложений.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>Комментариии в Python&#8217;е<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Для комментирования строк используется решетка</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/python</span>
+
+<span class="c"># Первый коммент</span>
+<span class="k">print</span> <span class="s">&quot;Hello, Python!&quot;</span><span class="p">;</span>  <span class="c"># второй коммент</span>
+</pre></div>
+</div>
+<p>Результат</p>
+<div class="code highlight-python"><pre>Hello, Python!</pre>
+</div>
+<p>Комментарии магут находится после выражения</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Bla bla bla&quot;</span> <span class="c"># Это то же коммент</span>
+</pre></div>
+</div>
+<p>Еще пример</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="c"># This is a comment.</span>
+<span class="c"># This is a comment, too.</span>
+<span class="c"># This is a comment, too.</span>
+<span class="c"># I said that already.</span>
+</pre></div>
+</div>
+<p>Для многострочных коментариев можно использовать тройные ковычки</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot; это многострочный</span>
+<span class="sd">    коммент.</span>
+<span class="sd">    1</span>
+<span class="sd">    2</span>
+<span class="sd">    3</span>
+<span class="sd">    4</span>
+<span class="sd">    5</span>
+<span class="sd">    конец коммента</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">print</span> <span class="s">&quot;Hello, Python&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>Пустые строки:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>Строки содержащие только пробелы, возможно с комментариями, считаются пустыми и
+Python полностью игнорирует их.</p>
+<p>В интерактивном режиме для завершения многострочного выражения необходимо
+ввести пустую строку.</p>
+</div>
+<div class="section" id="id11">
+<h2>Многострочные выражения в одной строке:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>Точка с запятой (;) позволяет использовать несколько выражений в одной строке.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;foo&#39;</span><span class="p">;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Переменные:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>Присвоение значений выполняется при помощи знака ровно (=)</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">counter</span> <span class="o">=</span> <span class="mi">100</span>          <span class="c"># Целое число</span>
+<span class="n">miles</span>   <span class="o">=</span> <span class="mf">1000.0</span>       <span class="c"># С плавающей точкой</span>
+<span class="n">name</span>    <span class="o">=</span> <span class="s">&quot;John&quot;</span>       <span class="c"># Строка</span>
+
+<span class="k">print</span> <span class="n">counter</span>
+<span class="k">print</span> <span class="n">miles</span>
+<span class="k">print</span> <span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>Стандартные типы данных:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>числовой</li>
+<li>строковый</li>
+<li>список</li>
+<li>кортеж</li>
+<li>словарь</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>Числа:<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">var1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">var2</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>Python поддерживает 4 различных цифровых типов
+* int (целые числа)
+* long (расширенный диапазон целых чисел)
+* float (числа с плавающей точкой)
+* complex (комплексные числа)</p>
+<p>Примеры:</p>
+<table cellpadding="5" border="1" class="src">
+<tbody><tr><th>int</th><th>long</th><th>float</th><th>complex</th></tr>
+<tr><td>10</td><td>51924361L</td><td>0.0</td><td>3.14j</td></tr>
+<tr><td>100</td><td>-0x19323L</td><td>15.20</td><td>45.j</td></tr>
+<tr><td>-786</td><td>0122L</td><td>-21.9</td><td>9.322e-36j</td></tr>
+<tr><td>080</td><td>0xDEFABCECBDAECBFBAEl</td><td>32.3+e18</td><td>.876j</td></tr>
+<tr><td>-0490</td><td>535633629843L</td><td>-90.</td><td>-.6545+0J</td></tr>
+<tr><td>-0x260</td><td>-052318172735L</td><td>-32.54e100</td><td>3e+26J</td></tr>
+<tr><td>0x69</td><td>-4721885298529L</td><td>70.2-E12</td><td>4.53e-7j</td></tr>
+</tbody></table></div>
+<div class="section" id="id15">
+<h2>Строки:<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="nb">str</span> <span class="o">=</span> <span class="s">&#39;Hello World!&#39;</span>
+
+<span class="k">print</span> <span class="nb">str</span>          <span class="c"># Напечатает строку</span>
+<span class="k">print</span> <span class="nb">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>       <span class="c"># Напечатает 1ый символ строки</span>
+<span class="k">print</span> <span class="nb">str</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>     <span class="c"># Напечатает симовлы с 3го по 6й</span>
+<span class="k">print</span> <span class="nb">str</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>      <span class="c"># Напечатает с 3го символа и до конца строки</span>
+<span class="k">print</span> <span class="nb">str</span> <span class="o">*</span> <span class="mi">2</span>      <span class="c"># Напечатать строку 2 раза</span>
+<span class="k">print</span> <span class="nb">str</span> <span class="o">+</span> <span class="s">&quot;TEST&quot;</span> <span class="c"># Конкатенация строк</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>Списки:<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/python</span>
+
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[</span> <span class="s">&#39;abcd&#39;</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">&#39;john&#39;</span><span class="p">,</span> <span class="mf">70.2</span> <span class="p">]</span>
+<span class="n">tinylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="s">&#39;john&#39;</span><span class="p">]</span>
+
+<span class="k">print</span> <span class="nb">list</span>          <span class="c"># Напечатает весь список</span>
+<span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>       <span class="c"># Напечатает первый элемент списка</span>
+<span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>     <span class="c"># Напечатает элементы со 2го по 4ый</span>
+<span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>      <span class="c"># Напечатает элементы начиная с 3го</span>
+<span class="k">print</span> <span class="n">tinylist</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c"># Напечатает список 2 раза</span>
+<span class="k">print</span> <span class="nb">list</span> <span class="o">+</span> <span class="n">tinylist</span> <span class="c"># Конкатенация списков</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>Кортежи:<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<p>Кортежи похожи на списки, отличием является то что они предназначенны только
+для чтения, за счет этого работаю быстрее.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span> <span class="s">&#39;abcd&#39;</span><span class="p">,</span> <span class="mi">786</span> <span class="p">,</span> <span class="mf">2.23</span><span class="p">,</span> <span class="s">&#39;john&#39;</span><span class="p">,</span> <span class="mf">70.2</span>  <span class="p">)</span>
+<span class="n">tinytuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s">&#39;john&#39;</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="nb">tuple</span>           <span class="c"># Напечатает полный список</span>
+<span class="k">print</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>        <span class="c"># Напечатает первый элемент списка</span>
+<span class="k">print</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>      <span class="c"># Напечатать элементы со 2го по 4ый</span>
+<span class="k">print</span> <span class="nb">tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>       <span class="c"># Напечатать элементы начиная с 3го</span>
+<span class="k">print</span> <span class="n">tinytuple</span> <span class="o">*</span> <span class="mi">2</span>   <span class="c"># Напечатать 2 раза</span>
+<span class="k">print</span> <span class="nb">tuple</span> <span class="o">+</span> <span class="n">tinytuple</span> <span class="c"># Конкатенация</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>Словари:<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<p>Словарь в Python это тип хэш-таблиц. Они работаю как ассоциативные маччивы или
+хэши в Perl и состоят из пар ключ-значение.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">tinydict</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;one&#39;</span><span class="p">:</span> <span class="s">&#39;bla bla&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&#39;Hello&#39;</span><span class="p">,</span> <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;john&#39;</span><span class="p">,</span><span class="s">&#39;code&#39;</span><span class="p">:</span><span class="mi">6734</span><span class="p">,</span> <span class="s">&#39;dept&#39;</span><span class="p">:</span> <span class="s">&#39;sales&#39;</span><span class="p">}</span>
+<span class="k">print</span> <span class="nb">dict</span><span class="p">[</span><span class="s">&#39;one&#39;</span><span class="p">]</span>       <span class="c"># Напечатает значение для ключа &#39;one&#39;</span>
+<span class="k">print</span> <span class="nb">dict</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>           <span class="c"># Напечатает значение ключа 2</span>
+<span class="k">print</span> <span class="n">tinydict</span>          <span class="c"># Напечатать весь словарь</span>
+<span class="k">print</span> <span class="n">tinydict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>   <span class="c"># Напечатать все ключи</span>
+<span class="k">print</span> <span class="n">tinydict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="c"># Напечатать вск значения</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>Основные операторы в Python:<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<p>a = 10, b = 20</p>
+<table width="100%" cellspacing="0" cellpadding="5" border="1" class="src">
+<tbody><tr>
+<th width="10%">Оператор</th><th width="45%">Описание</th><th>Пример</th>
+</tr>
+<tr>
+<td>+</td><td>Добавление - складывает значения по обе стороны от оператора</td><td> a + b будет 30</td>
+</tr>
+<tr>
+<td>-</td><td>Вычитание - вычитает значение справа от оператора из значения слева от оператора</td><td> a - b будет -10</td>
+</tr>
+<tr>
+<td>*</td><td>Умножение - умножает значения с каждой стороны от оператора</td><td> a * b будет 200</td>
+</tr>
+<tr>
+<td>/</td><td>Деление - делит значение слева от оператора на значение справа от оператора</td><td> b / a будет 2</td>
+</tr>
+<tr>
+<td>%</td><td>Деление по модулю - делит значение слева от оператора на значение справа от оператора и возвращает остаток</td><td> b % a будет 0</td>
+</tr>
+<tr>
+<td>**</td><td>Возведение в степень - возводит значение слева от оператора в степень равной значению справа от оператора</td><td> a**b будет 10 в 20й степени</td>
+</tr>
+<tr>
+<td>//</td><td>Деление нацело - деление где результат будет целое число от дробного. Округление происходит при помощи функции math.floor</td><td> 9//2 будет 4 и 9.0//2.0 будет 4.0</td>
+</tr>
+<tr>
+<td>==</td><td> Проверяет значения по обе стороны оператора на равенство или нет, если равны то возвращает True.</td><td> a == b будет False. </td>
+</tr>
+<tr>
+<td>!=</td><td> Проверяет значения по обе стороны оператора на равенство или нет, если не равны то возвращает False.</td><td> a != b будет True. </td>
+</tr>
+<tr>
+<td>&lt;&gt;</td><td> Тоже самое что и !=.</td><td> (a &lt;&gt; b) будет True.</td>
+</tr>
+<tr>
+<td>&gt;</td><td> Проверяет что значение слева от оператора больше чем значение справа, если да то возвращает True.</td><td> a &gt; b будет False. </td>
+</tr>
+<tr>
+<td>&lt;</td><td> Проверяет что значение слева от оператора меньше чем значение справа, если да то возвращает True.</td><td> a &lt; b возвращает True. </td>
+</tr>
+<tr>
+<td>&gt;=</td><td>Проверяет что значение слева от оператора больше чем значение справа или равно, если да то возвращает True.</td><td> a &gt;= b будет False. </td>
+</tr>
+<tr>
+<td>&lt;=</td><td> Проверяет что значение слева от оператора меньше чем значение справа или равно, если да то возвращает True.</td><td> a &lt;= b будет True. </td>
+</tr>
+<tr>
+<td>=</td><td>Оператор присваивания, присваивает значение справа от оператора переменной слева от оператора</td><td> c = a + b, c будет равно 30</td>
+</tr>
+<tr>
+<td>+=</td><td>Оператор добавления и присваивания, добавляет значение справа от оператора значению слева от оператора и присваивает результат значению слева от оператора</td><td> c += a то же самое что c = c + a</td>
+</tr>
+<tr>
+<td>-=</td><td>Оператор вычитания и присваивания, вычитает значение справа от операторада из значеня слева от оператора и присваивает результат значению слева от оператора</td><td> c -= a то же самое что c = c - a</td>
+</tr>
+<tr>
+<td>*=</td><td>Оператор умножения и присваивания, перемножает значения
+справа и слева от оператора и присваивает результат значению слева</td>
+<td> c *= a то же самое что c = c * a</td>
+</tr>
+<tr>
+<td>/=</td><td>Оператор деления и присваивания, дели значение слева от оператора на значение справа от оператора и присваивает результат значению слева</td><td> c /= a то же самое что c = c / a</td>
+</tr>
+<tr>
+<td>%=</td><td>Оператор деления на ноль и присваивание, совершает деление по модулю и присваивает результат значению слева от оператора</td><td> c %= a то же самое что c = c % a</td>
+</tr>
+<tr>
+<td>**=</td><td>Оператор возведения в степень и присваивания, производит возведение в степень и присваивает результат значению слева от оператора</td><td> c **= a то же что c = c ** a</td>
+</tr>
+<tr>
+<td>//=</td><td>Деление нацело и присваивание</td><td> c //= a то же что c = c // a</td>
+</tr>
+<tr>
+<td>&amp;</td><td> Бинарное И </td><td> a &amp; b будет 12</td>
+</tr>
+<tr>
+<td>|</td><td> Бинарное ИЛИ. </td><td> a | b будет 61</td>
+</tr>
+<tr>
+<td>^</td><td> Бинарное исключающее ИЛИ. </td><td> a ^ b будет 49</td>
+</tr>
+<tr>
+<td>~</td><td> Поразрядное дополнение до единицы. </td><td> ~a будет -60.</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td><td> Бинарный сдвиг влево.</td><td> a &lt;&lt; 2 будет 240</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td><td> Бинарный сдвиг вправо.</td><td> a &gt;&gt; 2 будет 15</td>
+</tr>
+<tr>
+<td>and</td><td> Логическое И.</td><td> a and b будет true.</td>
+</tr>
+<tr>
+<td>or</td><td>Логическое ИЛИ.</td><td> a or b будет true.</td>
+</tr>
+<tr><td>not</td><td>Логическое отрицание.</td><td> not(a &amp;&amp; b) будет False. </td>
+</tr>
+<tr>
+<td>in</td><td>Возвращает True если находит элемент в заданной последовательности, иначе False.</td><td> x in y.</td>
+</tr>
+<tr>
+<td>not in</td><td>Возвращает False если находит элемент в заданной последовательности, иначе True.</td><td>x not in y.</td>
+</tr>
+<tr>
+<td>is</td><td>True если переменные по обе стороны оператора указывают на тот же объект, иначе False.</td><td> x is y.</td>
+</tr>
+<tr>
+<td>is not</td><td>False если переменные по обе стороны оператора указывают на тот же объект, иначе True.</td><td> x is not y.</td>
+</tr>
+</tbody></table></div>
+<div class="section" id="id20">
+<h2>Приоритеты операторов:<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<p>В таблице перечислены все операторы начиная с высшего приоритета и заканчивая
+низшим.</p>
+<table cellpadding="5" border="1" class="src">
+<tbody><tr><th>Оператор</th><th>Описание</th></tr>
+<tr>
+<td>**</td>
+<td>Возведение в степень</td>
+</tr><tr>
+<td>~ + -</td>
+<td>Поразрядное дополнение, унарный плюс и минус</td>
+</tr><tr>
+<td>* / % //</td>
+<td>Умножение, деление, деление по модулю, деление нацело</td>
+</tr><tr>
+<td>+ -</td>
+<td>Сложение, вычитание</td>
+</tr><tr>
+<td>&gt;&gt; &lt;&lt;</td>
+<td>Сдвиги влево и вправо</td>
+</tr><tr>
+<td>&amp;</td>
+<td>Побитовый И</td>
+</tr><tr>
+<td>^ |</td>
+<td>Побитовые исключающее ИЛИ и обычное ИЛИ</td>
+</tr><tr>
+<td>&lt;= &lt; &gt; &gt;=</td>
+<td>Операторы сравнения</td>
+</tr><tr>
+<td>&lt;&gt; == !=</td>
+<td>Операторы равенства</td>
+</tr>
+<tr>
+<td>= %= /= //= -= += |= &amp;= &gt;&gt;= &lt;&lt;= *= **=</td>
+<td>Операторы присваивания</td>
+</tr>
+<tr>
+<td>is is not</td>
+<td>Операторы идентификации</td>
+</tr>
+<tr>
+<td>in not in</td>
+<td>Операторы принадлежности</td>
+</tr><tr>
+<td>note or and</td>
+<td>Логические операторы</td>
+</tr>
+</tbody></table></div>
+<div class="section" id="if">
+<h2>Оператор if:<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">expression</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="else">
+<h2>Оператор else:<a class="headerlink" href="#else" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">expression</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="elif">
+<h2>Оператор elif:<a class="headerlink" href="#elif" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">expression1</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">expression2</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">expression3</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="if-elif-else">
+<h2>Вложенный if...elif...else:<a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><pre>if expression1:
+   statement(s)
+   if expression2:
+      statement(s)
+   elif expression3:
+      statement(s)
+   else
+      statement(s)
+elif expression4:
+   statement(s)
+else:
+   statement(s)</pre>
+</div>
+</div>
+<div class="section" id="while">
+<h2>Цикл while:<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">while</span> <span class="n">expression</span><span class="p">:</span>
+   <span class="n">statement</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>Бесконечный цикл:<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;For quit push Ctrl-C&quot;</span>
+</pre></div>
+</div>
+<p>Бесконечный цикл может быть полезен в клиент/серверном программировании где
+сервер постоянно слушает порт.</p>
+</div>
+<div class="section" id="id22">
+<h2>Выражения в одну строку:<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">while</span> <span class="n">expression</span><span class="p">:</span> <span class="n">statement</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for">
+<h2>Цикл for:<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">iterating_var</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+   <span class="n">statements</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Перебор списка</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;banana&#39;</span><span class="p">,</span> <span class="s">&#39;apple&#39;</span><span class="p">,</span>  <span class="s">&#39;mango&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fruits</span><span class="p">)):</span>
+   <span class="k">print</span> <span class="s">&#39;Current fruit :&#39;</span><span class="p">,</span> <span class="n">fruits</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+<span class="k">print</span> <span class="s">&quot;Good bye!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>Классы:<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="code highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">ClassName</span><span class="p">:</span>
+   <span class="s">&#39;Optional class documentation string&#39;</span>
+   <span class="n">class_suite</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Этот класс имеет строку документации, которая доступна из метода ClassName.__doc__</li>
+<li>class_suite состоит из функции класса, атрибутов и всех его членов.</li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h2>Создание объектов<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<p>Для создания экземпляра класса, следует вызвать класс, используя имя класса и
+передать в него аргументы которые находятся в методе __init__.</p>
+<div class="code highlight-python"><div class="highlight"><pre><span class="s">&quot;This would create first object of Employee class&quot;</span>
+<span class="n">emp1</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s">&quot;Zara&quot;</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="s">&quot;This would create second object of Employee class&quot;</span>
+<span class="n">emp2</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s">&quot;Manni&quot;</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>Доступ к атрибутам:<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id26">
+<h2>Вопросы?<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dHo2MmpkOGZiQVRhaWQ4dk9uUnF2dWc6MQ" width="760" height="389" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe></div>
+<div class="section" id="id27">
+<h2>Закрепление материала<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
 <p><strong>Задание1</strong></p>
 <p><strong>Задание2</strong></p>
 <p><strong>Задание3</strong></p>
 </div>
-<div class="section" id="id3">
-<h2>Домашнее задание<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h2>Домашнее задание<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id4">
-<h2>Ресурсы<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id29">
+<h2>Ресурсы<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://www.intuit.ru/department/pl/python/">Язык программирования Python</a> Автор: Сузи Р.А</li>
 <li><a class="reference external" href="http://hyperpolyglot.org/scripting">Сравнение Python с php, perl, ruby. Часть 1</a></li>
@@ -74,6 +643,9 @@
 <li><a class="reference external" href="http://buzzard.pugetsound.edu/sage-practice/index.html">Python для графовой теории</a></li>
 <li><a class="reference external" href="http://python.objectis.net/">Список ссылок на документацию по Python</a></li>
 <li><a class="reference external" href="http://www.ug.it.usyd.edu.au/~comp5315/outline.html">Лекции по Python в Университете Сиднея</a></li>
+<li>Текстовый редактор vim для разработки программ на Python</li>
+<li><a class="reference external" href="http://rgruet.free.fr/PQR27/PQR2.7.html">Краткий справочник по Python</a></li>
+<li><a class="reference external" href="http://www.tutorialspoint.com/python/index.htm">TutorialPoint</a></li>
 </ul>
 </div>
 </div>
@@ -87,10 +659,41 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Основы языка программирования Python</a><ul>
-<li><a class="reference internal" href="#id1">Вопросы?</a></li>
-<li><a class="reference internal" href="#id2">Закрепление материала</a></li>
-<li><a class="reference internal" href="#id3">Домашнее задание</a></li>
-<li><a class="reference internal" href="#id4">Ресурсы</a></li>
+<li><a class="reference internal" href="#id1">Основные функции:</a></li>
+<li><a class="reference internal" href="#id2">Установка Python:</a></li>
+<li><a class="reference internal" href="#id3">Первая программа на Python:</a></li>
+<li><a class="reference internal" href="#id4">Идентификаторы в Python:</a></li>
+<li><a class="reference internal" href="#id5">Зарезервированные слова:</a></li>
+<li><a class="reference internal" href="#id6">Строки и отступы:</a></li>
+<li><a class="reference internal" href="#id7">Многострочные выражения:</a></li>
+<li><a class="reference internal" href="#id8">Цитаты в Python&#8217;е</a></li>
+<li><a class="reference internal" href="#id9">Комментариии в Python&#8217;е</a></li>
+<li><a class="reference internal" href="#id10">Пустые строки:</a></li>
+<li><a class="reference internal" href="#id11">Многострочные выражения в одной строке:</a></li>
+<li><a class="reference internal" href="#id12">Переменные:</a></li>
+<li><a class="reference internal" href="#id13">Стандартные типы данных:</a></li>
+<li><a class="reference internal" href="#id14">Числа:</a></li>
+<li><a class="reference internal" href="#id15">Строки:</a></li>
+<li><a class="reference internal" href="#id16">Списки:</a></li>
+<li><a class="reference internal" href="#id17">Кортежи:</a></li>
+<li><a class="reference internal" href="#id18">Словари:</a></li>
+<li><a class="reference internal" href="#id19">Основные операторы в Python:</a></li>
+<li><a class="reference internal" href="#id20">Приоритеты операторов:</a></li>
+<li><a class="reference internal" href="#if">Оператор if:</a></li>
+<li><a class="reference internal" href="#else">Оператор else:</a></li>
+<li><a class="reference internal" href="#elif">Оператор elif:</a></li>
+<li><a class="reference internal" href="#if-elif-else">Вложенный if...elif...else:</a></li>
+<li><a class="reference internal" href="#while">Цикл while:</a></li>
+<li><a class="reference internal" href="#id21">Бесконечный цикл:</a></li>
+<li><a class="reference internal" href="#id22">Выражения в одну строку:</a></li>
+<li><a class="reference internal" href="#for">Цикл for:</a></li>
+<li><a class="reference internal" href="#id23">Классы:</a></li>
+<li><a class="reference internal" href="#id24">Создание объектов</a></li>
+<li><a class="reference internal" href="#id25">Доступ к атрибутам:</a></li>
+<li><a class="reference internal" href="#id26">Вопросы?</a></li>
+<li><a class="reference internal" href="#id27">Закрепление материала</a></li>
+<li><a class="reference internal" href="#id28">Домашнее задание</a></li>
+<li><a class="reference internal" href="#id29">Ресурсы</a></li>
 </ul>
 </li>
 </ul>
